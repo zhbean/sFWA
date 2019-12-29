@@ -1,9 +1,46 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="wrap_content">
-<TextView
-    android:id="@+id/notify_address"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"/>
-</LinearLayout>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="80dp"
+    android:background="@drawable/shape_album_item_bg">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_marginLeft="10dp"
+        android:id="@+id/one_notification"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/notify_url_address"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:textSize="16dp"
+            android:layout_marginTop="10dp"
+            android:lines="1"
+            android:ellipsize="end"
+            android:text="测试用的标题"
+            />
+
+        <TextView
+            android:id="@+id/notify_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="14dp"
+            android:lines="2"
+            android:ellipsize="end"
+            android:text="测试内容：“我们都在努力奔跑，我们都是追梦人。”习近平总书记在2019年新年贺词中这句振奋人心的话，成为网络上刷屏的“金句”，引发亿万人共鸣。这句话饱含深情，让多少人心潮起伏，热泪盈眶；这句话充满力量，激励无数人星夜兼程，砥砺前行。"
+            />
+
+        <TextView
+            android:id="@+id/notify_time"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="2dp"
+            android:textSize="10sp"
+            android:text="2019/12/24  "
+            />
+
+    </LinearLayout>
+</RelativeLayout>

@@ -27,12 +27,18 @@ public class NotifyAdapter extends RecyclerView.Adapter<NotifyAdapter.NotifyHold
     }
     static class  NotifyHolder extends RecyclerView.ViewHolder{
         View notifyView;
-        TextView textView;
+        TextView notifyUrlTv;
+        TextView notifyContent;
+        TextView notifyTime;
+
         public NotifyHolder(@NonNull View itemView) {
             super(itemView);
-            textView=itemView.findViewById(R.id.notify_address);
+            notifyUrlTv=itemView.findViewById(R.id.notify_url_address);
+            notifyContent=itemView.findViewById(R.id.notify_content);
+            notifyTime=itemView.findViewById(R.id.notify_time);
         }
     }
+
     @NonNull
     @Override
     public NotifyAdapter.NotifyHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
@@ -45,8 +51,9 @@ public class NotifyAdapter extends RecyclerView.Adapter<NotifyAdapter.NotifyHold
     @Override
     public void onBindViewHolder(@NonNull NotifyHolder holder, int position) {
         Notify notify =notifiesArrayList.get(position);
-        holder.textView.setText(notify.getAddress());
-
+        holder.notifyUrlTv.setText(notify.getAddress());
+        holder.notifyContent.setText(notify.getContent());
+        holder.notifyTime.setText(notify.getNtime());
     }
 
 

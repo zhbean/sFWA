@@ -1,5 +1,7 @@
 package com.zb.finalweba.data;
 
+import android.icu.text.SimpleDateFormat;
+
 import java.util.Date;
 
 public class Notify {
@@ -40,5 +42,15 @@ public class Notify {
     public void setStatus(Integer status) {
         this.status = status;
     }
-//    private Subscription subscription;
+
+    public String getNtime() {
+        String format = "yyyy-MM-dd HH:mm:ss";
+        SimpleDateFormat formatter = new SimpleDateFormat(format);
+        return formatter.format(ntime);
+    }
+
+    public void setNtime(Date ntime) {
+        this.ntime = ntime;
+    }
+    //    private Subscription subscription;
 }

@@ -13,6 +13,7 @@ import com.zb.finalweba.ui.subscription.SubscriptionFragment;
 public class MainPagerAdapter extends FragmentStatePagerAdapter {
 
 
+    //1
     public MainPagerAdapter(@NonNull FragmentManager fm) {
         super(fm);
     }
@@ -20,6 +21,7 @@ public class MainPagerAdapter extends FragmentStatePagerAdapter {
     @NonNull
     @Override
     public Fragment getItem(int position) {
+        //2
         switch (position){
             case 0: NotifyFragment fragment1=new NotifyFragment();
             return fragment1;
